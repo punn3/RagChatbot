@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมกับไฟล์ CSS -->
+    <style>
+        body {
+            font-family: 'Kanit', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(200, 0, 0, 0.1);
+            border-radius: 15px;
+            text-align: center;
+            border-top: 5px solid #cc0000;
+        }
+        
+        h1 {
+            color: #cc0000;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background-color: #cc0000;
+            bottom: -10px;
+            left: 20%;
+        }
+        
+        h2 {
+            color: #cc0000;
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .team {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(200, 0, 0, 0.2);
+        }
+        
+        .team-member:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #ff3333, #cc0000);
+        }
+        
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #cc0000;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+        
+        .team-member p:first-of-type {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #cc0000;
+            font-size: 1.1rem;
+        }
+        
+        .team-member p:last-of-type {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0;
+            background-color: #f8f8f8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .team {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .team {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About us</h1>
+        <p>เราคือทีมงานที่มุ่งมั่นในการพัฒนาเทคโนโลยี Chatbot ที่สามารถเข้าใจและตอบสนองต่อความต้องการของผู้ใช้ได้อย่างแม่นยำ 
+        เรามุ่งเน้นในการสร้างประสบการณ์ที่สะดวก รวดเร็ว และมีประสิทธิภาพในการสื่อสาร เราเชื่อในคุณค่าแห่งนวัตกรรมและการทำงานร่วมกันเพื่อสร้างโซลูชันที่ตอบโจทย์ธุรกิจและผู้ใช้งาน</p>
+        <h2>Team member</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/486185941_1326580745251351_2869489043192334983_n.jpg') }}" alt="สมาชิก 1">
+                <p>นางสาวกฤติยาภรณ์ สมโสก</p>
+                <p>653040118-4</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/4fe90a97-bc67-42ab-9982-357eb4cf202a.jpg') }}" alt="สมาชิก 2">
+                <p>นางสาวปุณฑรีวรรณ ไชยา</p>
+                <p>653040136-2</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/d6dc2f6d-4375-4ed8-a2f4-90541494764c.jpg') }}" alt="สมาชิก 3">
+                <p>นางสาวเปรมิกา แต้วกลาง</p>
+                <p>653040137-0</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/48bc8df9-8ba9-44b5-a0e0-7f77b526ba67.jpg') }}" alt="สมาชิก 4">
+                <p>วีรฉัตร บันเทิงสุข</p>
+                <p>653040461-1</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/764f2e01-2af3-4340-b7d1-d6f27b78e207.jpg') }}"  alt="สมาชิก 5">
+                <p>นายตฤณ รินไธสง</p>
+                <p>653040448-3</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='asset/e306fd33-c816-4053-87d1-b5d52fdee4de.jpg') }}" alt="สมาชิก 6">
+                <p>นางสาวอัญมณี สมสุข</p>
+                <p>653040633-8</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
